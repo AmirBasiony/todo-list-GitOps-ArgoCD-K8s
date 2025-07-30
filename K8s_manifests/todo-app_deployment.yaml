@@ -33,8 +33,9 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app: todo-app
+    app: todo  
   ports:
     - port: 4000
       targetPort: 4000
+
 
