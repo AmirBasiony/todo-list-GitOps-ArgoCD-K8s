@@ -31,12 +31,27 @@ metadata:
   name: todo-service
   namespace: todo-list-app
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
-    app: todo  
+    app: todo
   ports:
-    - port: 4000
+    - protocol: TCP
+      port: 80
       targetPort: 4000
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: todo-service
+#   namespace: todo-list-app
+# spec:
+#   type: ClusterIP
+#   selector:
+#     app: todo  
+#   ports:
+#     - port: 4000
+#       targetPort: 4000
+
+
 
 # kubectl port-forward --address-0.0.0.0 svc/argocd-server  8888:80 -n argocd
 # kubectl port-forward --address-0.0.0.0 svc/todo-service  8080:4000 -n todo-list-app
