@@ -31,11 +31,10 @@ metadata:
   name: todo-service
   namespace: todo-list-app
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
-    app: todo
+    app: todo-app
   ports:
-    - protocol: TCP
-      port: 4000
+    - port: 4000
       targetPort: 4000
-      nodePort: 30001
+
