@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/harish981/argocd-node-app-config.git
+    repoURL: https://github.com/AmirBasiony/todo-list-GitOps-ArgoCD-K8s.git
     targetRevision: main
     path: K8s_manifests
   destination: 

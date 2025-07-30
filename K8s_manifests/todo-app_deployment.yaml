@@ -21,6 +21,9 @@ spec:
         env:
         - name: mongoDbUrl
           value: mongodb://mongo:27017/todolistDb
+      imagePullSecrets:
+        - name: ecr-creds
+
 ---
 apiVersion: v1
 kind: Service
