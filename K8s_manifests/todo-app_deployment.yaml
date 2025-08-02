@@ -4,7 +4,7 @@ metadata:
   name: todo-app
   namespace: todo-list-app
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: todo
@@ -37,13 +37,4 @@ spec:
   ports:
     - port: 4000
       targetPort: 4000
-
-
-
-# kubectl port-forward --address-0.0.0.0 svc/argocd-server  8888:80 -n argocd
-# ssh -i todo-app-ssh-key.pem -L 8888:localhost:8888 ubuntu@PUBLIC_IP
-
-# kubectl port-forward --address-0.0.0.0 svc/todo-service  8080:4000 -n todo-list-app
-# ssh -i todo-app-ssh-key.pem -L 8080:localhost:8080 ubuntu@PUBLIC_IP
-
 
