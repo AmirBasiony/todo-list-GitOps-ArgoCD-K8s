@@ -23,6 +23,13 @@ spec:
           value: mongodb://mongo:27017/todolistDb
       imagePullSecrets:
         - name: ecr-creds
+      resources:
+        requests:
+          memory: "128Mi"
+          cpu: "100m"
+        limits:
+          memory: "256Mi"
+          cpu: "250m"
 
 ---
 apiVersion: v1
