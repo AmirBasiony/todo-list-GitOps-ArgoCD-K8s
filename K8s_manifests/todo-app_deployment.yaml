@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: todo
-        image: 875506561855.dkr.ecr.us-east-1.amazonaws.com/todo-nodejs-app:v1.0.0.23
+        image: 875506561855.dkr.ecr.us-east-1.amazonaws.com/todo-nodejs-app:v1.0.0.24
         ports:
         - containerPort: 4000
         env:
