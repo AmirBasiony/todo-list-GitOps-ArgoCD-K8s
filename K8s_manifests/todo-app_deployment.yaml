@@ -31,12 +31,13 @@ metadata:
   name: todo-service
   namespace: todo-list-app
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: todo  
   ports:
     - port: 4000
       targetPort: 4000
+      nodePort: 30000
 
 
 # kubectl port-forward --address-0.0.0.0 svc/argocd-server  8888:80 -n argocd
