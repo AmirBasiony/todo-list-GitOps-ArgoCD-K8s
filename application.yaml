@@ -12,7 +12,7 @@ spec:
     path: K8s_manifests
   destination: 
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: todo-app
 
   syncPolicy:
     syncOptions:
@@ -21,3 +21,5 @@ spec:
     automated:
       selfHeal: true
       prune: true
+      automaticallySync: true
+      
