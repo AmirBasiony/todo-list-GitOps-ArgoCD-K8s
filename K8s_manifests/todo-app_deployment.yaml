@@ -23,25 +23,7 @@ spec:
           value: mongodb://mongo:27017/todolistDb
       imagePullSecrets:
         - name: ecr-creds
-      readinessProbe:
-        httpGet:
-          path: /health
-          port: 4000
-        initialDelaySeconds: 5
-        periodSeconds: 10
-      livenessProbe:
-        httpGet:
-          path: /health
-          port: 4000
-        initialDelaySeconds: 5
-        periodSeconds: 10
-      # resources:
-      #   requests:
-      #     memory: "128Mi"
-      #     cpu: "100m"
-      #   limits:
-      #     memory: "256Mi"
-      #     cpu: "250m"
+      
 ---
 apiVersion: v1
 kind: Service
